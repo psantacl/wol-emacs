@@ -1,7 +1,7 @@
 To install:
 
 1)git clone it
-2)ln -s ~/.emacs PATH-TO-DOT-EMACS-FILE-IN-THIS-REPO
+2)ln -s PATH-TO-DOT-EMACS-FILE-IN-THIS-REPO ~/.emacs 
 3)fire up emacs 
 
 To get the most of the color themes in this profile, you will need to run emacs in a terminal that supports 256 colors.  If you're on a mac, this probably means iterm and requires that you edit your profile to 'Report Terminal Type' as 'xterm-256color'.  Apple's default version of gnu screen does not support 256 so you will have to build it yourself(http://ryanwilliams.org/2010/Oct/09/gnu-screen-256-colours-mac-os-x) and then set the TERM env variable to 'xterm-256colors' so emacs knows what it is dealing with.
