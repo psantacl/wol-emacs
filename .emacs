@@ -174,14 +174,31 @@
 ;;make things pretty
 (krb-compile-el-files-in-library "lib/themes")
 (require 'color-theme)
+
 (color-theme-initialize)
-(color-theme-arjen)
+(load "themes/blackbored.el")
+(color-theme-blackbored)
+
+;;highlight current line
+(global-hl-line-mode 1)
+
+(set-face-background 'hl-line "#333333")
+
+;;set cursor colour(doesn't work with iterm :(
+(set-cursor-color "yellow")
+
+;;make sure ansi colour character escapes are honoured
+(ansi-color-for-comint-mode-on)
 
 ;;hide menu bar
 (menu-bar-mode -1)
 
 ;;autocomplete
 (krb-compile-el-files-in-library "lib/autocomplete")
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; auto complete stuff
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (require 'auto-complete)
 (require 'auto-complete-config)
@@ -214,7 +231,6 @@
 (require 'ac-slime)
 (add-hook 'slime-mode-hook 'set-up-slime-ac)
 (setq ac-sources (cons 'ac-source-slime-simple ac-sources))
-
 
 
 
