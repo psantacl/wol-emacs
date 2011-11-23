@@ -74,6 +74,7 @@
 (load "toggle-case.el")
 
 
+(require 'krb-misc)
 (global-set-key "\C-cr\\" 'krb-reindent-entire-buffer)
 
 
@@ -180,12 +181,13 @@
 (color-theme-blackbored)
 
 ;;highlight current line
-(global-hl-line-mode 1)
+;; (global-hl-line-mode 1)
+;; (global-hl-line-mode -1)
 
 (set-face-background 'hl-line "#333333")
 
 ;;set cursor colour(doesn't work with iterm :(
-(set-cursor-color "yellow")
+;; (set-cursor-color "yellow")
 
 ;;make sure ansi colour character escapes are honoured
 (ansi-color-for-comint-mode-on)
